@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Contadores
+        let par = 0
+        let impar = 0
+
+        // Acumuladores
+        let sumaPar = 0
+        let sumaImpar = 0
+
+        for(let i = 1; i <= 3; i++){
+            let num = Number(prompt(`${i}. Ingrese un numero: `))
+        
+            if(num % 2 == 0){
+                par++
+                sumaPar += num
+            }
+            else{
+                impar++
+                sumaImpar += num// sumaImpar = sumaImpar + num
+            }
+        }
+
+        alert(`Pares: ${par}\nPromedio de pares: ${sumaPar/par}\nImpares: ${impar}\nPromedio de impares: ${sumaImpar/impar}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
