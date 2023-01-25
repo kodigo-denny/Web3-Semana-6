@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let aprobados = 0
+        let reprobados = 0
+        let nombres = []
+        let nota = []
+
+        for(let i = 1; i <= 10; i++){
+        
+            do{
+                nota[i-1] = Number(prompt(`${i}. Ingrese la nota: `))
+            }while(!(nota[i-1] >= 0 && nota[i-1] <= 10))
+
+            nombres[i-1] = prompt("Ingrese el nombre: ")
+
+            console.log(nombres.length)
+
+            if(nota[i-1] >= 6)
+                aprobados++
+            else
+                reprobados++
+        }
+
+        console.log(nombres)
+        console.log(nota)
+
+        let mensaje = ""
+
+        for(let i = 0; i < nombres.length; i++){
+            mensaje = mensaje + `Nombre: ${nombres[i]} Nota: ${nota[i]}\n`
+        }
+
+        alert(`${mensaje}\nCantidad de aprobados: ${aprobados}\nCantidad de reprobados: ${reprobados}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
